@@ -5,6 +5,7 @@
   "author": "Rahul Raviprasad",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "~3.9.1"
+    "gulp": "~3.9.1",
+    "bootstrap": "^3.3.6"
   }
 }
