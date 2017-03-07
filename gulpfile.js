@@ -4,6 +4,7 @@ var gulp = require('gulp');
 // var fs = require('fs');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 
 // Default task
@@ -21,6 +22,17 @@ gulp.task('minify-css', function() {
              .pipe(cleanCSS({compatibility: 'ie8'}))
              .pipe(rename({suffix: '.min'}))
              .pipe(gulp.dest('css'))
+             .pipe(browserSync.reload({
+               stream: true
+             }));
+});
+
+//minify-js
+gulp.task('minify-js', function() {
+  return gulp.src(['js/**/*.js', '!**/*.spec.js'])
+             .pipe(uglify())
+             .pipe(rename({suffix: '.min'}))
+             .pipe(gulp.dest('js'))
              .pipe(browserSync.reload({
                stream: true
              }));
