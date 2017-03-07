@@ -28,18 +28,16 @@
 
     <h3> List of Clubs</h3>
 
-    <div ng-controller="ClubsController">
-      {{name}}
-    </div>
-
-
-    <div class="card">
-      <div class="card-block">
-        <h4 class="card-title">Hyderabad Club</h4>
-        <p class="card-text">Here we share and discuss on random topics to improve communication skills</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div ng-controller="ClubsController as vm">
+      <div class="card" ng-repeat="club in vm.clubs">
+        <div class="card-block">
+          <h4 class="card-title">Hyderabad Club</h4>
+          <p class="card-text">Here we share and discuss on random topics to improve communication skills</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
       </div>
     </div>
+
 
     <!--main js file-->
     <script src="dist/main.min.js"></script>

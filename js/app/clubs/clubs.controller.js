@@ -1,11 +1,13 @@
 (function() {
   angular
-    .module('app.clubsController', [])
+    .module('app.clubsController', ['app.clubsService'])
     .controller('ClubsController', ClubsController);
 
-  ClubsController.$inject = ['$scope'];
+  ClubsController.$inject = ['$scope', 'ClubService'];
 
-  function ClubsController($scope) {
-    $scope.name = "Hello";
+  function ClubsController($scope, ClubService) {
+    var vm = this;
+
+    vm.clubs = ClubService.getClubs();
   }
 })();
