@@ -5,7 +5,9 @@ var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
+var clean = require('gulp-clean');
 
 // Default task
 gulp.task('default', []);
@@ -14,6 +16,12 @@ gulp.task('default', []);
 gulp.task('bootstrap', function() {
   return gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
              .pipe(gulp.dest('vendor/bootstrap'));
+});
+
+//clean
+gulp.task('clean', function() {
+  return gulp.src('js/main.min.js')
+             .pipe(clean());
 });
 
 //minify css
@@ -30,7 +38,8 @@ gulp.task('minify-css', function() {
 //minify-js
 gulp.task('minify-js', function() {
   return gulp.src(['js/**/*.js', '!**/*.spec.js'])
-             .pipe(uglify())
+             .pipe(concat('main.js'))
+             //.pipe(uglify())
              .pipe(rename({suffix: '.min'}))
              .pipe(gulp.dest('js'))
              .pipe(browserSync.reload({
@@ -50,5 +59,6 @@ gulp.task('browserSync', function() {
 // dev task
 gulp.task('dev', ['browserSync'], function() {
   gulp.watch('css/*.css', ['minify-css']);
+  gulp.watch('js/**/*.js', ['clean', 'minify-js']);
   gulp.watch('*.html', browserSync.reload);
 });
