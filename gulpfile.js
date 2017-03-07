@@ -41,7 +41,7 @@ gulp.task('minify-js', function() {
              .pipe(concat('main.js'))
              //.pipe(uglify())
              .pipe(rename({suffix: '.min'}))
-             .pipe(gulp.dest('js'))
+             .pipe(gulp.dest('dist'))
              .pipe(browserSync.reload({
                stream: true
              }));
@@ -57,7 +57,7 @@ gulp.task('browserSync', function() {
 });
 
 // dev task
-gulp.task('dev', ['browserSync'], function() {
+gulp.task('dev', ['browserSync', 'clean', 'minify-css', 'minify-js'], function() {
   gulp.watch('css/*.css', ['minify-css']);
   gulp.watch('js/**/*.js', ['clean', 'minify-js']);
   gulp.watch('*.html', browserSync.reload);
