@@ -1,6 +1,6 @@
 (function() {
   angular
-    .module('app.profile', [])
+    .module('app.profileService', [])
     .factory('ProfileService', ProfileService);
 
   ProfileService.$inject = ['$q'];
