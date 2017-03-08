@@ -8,6 +8,9 @@
   function ClubsController($scope, ClubService) {
     var vm = this;
 
-    vm.clubs = ClubService.getClubs();
+    ClubService.getClubs()
+      .then(function(response) {
+        vm.clubs = response.clubs;
+      });
   }
 })();

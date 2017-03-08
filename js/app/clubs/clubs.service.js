@@ -2,15 +2,19 @@ angular
   .module('app.clubsService', [])
   .factory('ClubService', ClubService);
 
-function ClubService() {
+ClubService.$inject = ['$q'];
+
+function ClubService($q) {
   var vm = this;
 
   vm.getClubs = getClubs;
 
+  return vm;
+
   /////////----------------------------------------------
 
   function getClubs() {
-    return {
+    return $q.when({
       clubs: [
         {
           name: 'Hyderabad',
@@ -21,6 +25,6 @@ function ClubService() {
           description: 'meet some of the most enthusiatic data scientist'
         }
       ]
-    };
+    });
   }
 }

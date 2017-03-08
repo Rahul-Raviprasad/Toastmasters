@@ -31,8 +31,8 @@
     <div ng-controller="ClubsController as vm">
       <div class="card" ng-repeat="club in vm.clubs">
         <div class="card-block">
-          <h4 class="card-title">Hyderabad Club</h4>
-          <p class="card-text">Here we share and discuss on random topics to improve communication skills</p>
+          <h4 class="card-title">{{ club.name }}</h4>
+          <p class="card-text" ng-bind="club.description"></p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
