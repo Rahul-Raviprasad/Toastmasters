@@ -25,3 +25,9 @@ body {
 #club-title {
   padding-left: 2%;
 }
+
+.user {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
