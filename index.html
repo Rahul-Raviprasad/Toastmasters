@@ -22,7 +22,7 @@
 
     <!--navbar-->
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
+      <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -83,7 +83,7 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-</nav>
+    </nav>
     <!-- nav bar ends-->
     <!--Login-->
     <div class="loginForm">
@@ -112,6 +112,27 @@
       </div>
     </div>
 
+    <!--Meetings starts-->
+    <h3>Meetings list</h3>
+    <div ng-controller="MeetingsController as vm">
+
+      <div class="card" ng-repeat="meeting in vm.meetings">
+        <div class="card-block row">
+          <div class="col-md-4">
+            <h4 class="card-title">{{ meeting.name }}</h4>
+            <p class="card-text" ng-bind="club.description"></p>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="btn btn-primary">{{ meeting.location }}</a>
+            <a href="#" class="btn btn-primary">Join meeting</a>
+          </div>
+          <div>
+            <a><href="#" class="btn btn-danger">Delete Meeting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--meetings ends-->
 
     <!--main js file-->
     <script src="dist/main.min.js"></script>
