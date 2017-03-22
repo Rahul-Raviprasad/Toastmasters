@@ -89,5 +89,5 @@
     };
 
     /* jshint ignore:end */
-});
+}
 })();
