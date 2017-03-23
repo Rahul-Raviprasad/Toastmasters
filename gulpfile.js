@@ -18,6 +18,12 @@ gulp.task('bootstrap', function() {
              .pipe(gulp.dest('vendor/bootstrap'));
 });
 
+// Angular ui router task
+gulp.task('angular-ui-router', function() {
+  return gulp.src(['node_modules/angular-ui-router/release/angular-ui-router.min.js'])
+             .pipe(gulp.dest('vendor/angular-ui-router'));
+});
+
 //clean
 gulp.task('clean', function() {
   return gulp.src('js/main.min.js')
