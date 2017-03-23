@@ -1,2 +1,2 @@
 angular
-  .module('app', ['app.clubs', 'app.profile', 'app.meeting']);
+  .module('app', ['ui.router', 'app.clubs', 'app.profile', 'app.meeting']);

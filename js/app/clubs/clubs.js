@@ -1,2 +1,2 @@
 angular
-  .module('app.clubs', ['app.clubsController'])
+  .module('app.clubs', [ 'app.clubs.routes', 'app.clubsController']);

@@ -1,0 +1,19 @@
+<h3 id="club-title"> List of Clubs</h3>
+
+<div ng-controller="ClubsController as vm">
+  <div class="card" ng-repeat="club in vm.clubs">
+    <div class="card-block row">
+      <div class="col-md-4">
+        <h4 class="card-title">{{ club.name }}</h4>
+        <p class="card-text" ng-bind="club.description"></p>
+      </div>
+      <div class="col-md-4">
+        <a href="#" class="btn btn-primary">View Details</a>
+        <a href="#" class="btn btn-primary">Join Club</a>
+      </div>
+      <div>
+        <a><href="#" class="btn btn-danger">Delete Club</a>
+      </div>
+    </div>
+  </div>
+</div>
