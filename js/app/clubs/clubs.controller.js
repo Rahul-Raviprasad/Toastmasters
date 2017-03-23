@@ -1,6 +1,6 @@
 (function() {
   angular
-    .module('app.clubsController', ['app.clubsService'])
+    .module('app.clubsController', ['mock.clubs.service'])
     .controller('ClubsController', ClubsController);
 
   ClubsController.$inject = ['$scope', 'ClubService'];
