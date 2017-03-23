@@ -1,4 +1,4 @@
 (function() {
   angular
-    .module('app.meeting', ['app.meetingsController']);
+    .module('app.meeting', ['app.meetings.routes', 'app.meetingsController']);
 })();

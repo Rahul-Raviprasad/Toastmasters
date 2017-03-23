@@ -1,0 +1,21 @@
+<!--Meetings starts-->
+<h3>Meetings list</h3>
+<div ng-controller="MeetingsController as vm">
+
+  <div class="card" ng-repeat="meeting in vm.meetings">
+    <div class="card-block row">
+      <div class="col-md-4">
+        <h4 class="card-title">{{ meeting.name }}</h4>
+        <p class="card-text" ng-bind="club.description"></p>
+      </div>
+      <div class="col-md-4">
+        <a href="#" class="btn btn-primary">{{ meeting.location }}</a>
+        <a href="#" class="btn btn-primary">Join meeting</a>
+      </div>
+      <div>
+        <a><href="#" class="btn btn-danger">Delete Meeting</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--meetings ends-->

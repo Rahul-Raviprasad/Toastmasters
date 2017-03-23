@@ -1,5 +1,4 @@
 (function () {
-
   angular
     .module('app.clubs.routes',[])
     .config(routeConfig);
