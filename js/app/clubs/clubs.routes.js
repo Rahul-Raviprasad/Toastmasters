@@ -9,13 +9,19 @@
     $stateProvider
       .state('clubs', {
         url: '/clubs',
-        templateUrl: 'js/app/clubs/clubs.client.view.html',
+        templateUrl: 'js/app/clubs/templates/clubs-list.tpl.html',
         controller: 'ClubsController',
         controllerAs: 'vm',
         data: {
           pageTitle: 'Clubs'
         }
       })
+      // .state('clubs.details', {
+      //   url: '/clubs/detailsID',
+      //   templateUrl: '',
+      //   controller: 'ClubsController',
+      //   controllerAs: 'vm'
+      // })
   }
 
 })();
