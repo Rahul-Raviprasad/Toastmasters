@@ -8,6 +8,6 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        template: ''
+        templateUrl: 'templates/home.tpl.html'
       })
   }

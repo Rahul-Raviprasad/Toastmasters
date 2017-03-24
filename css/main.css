@@ -2,6 +2,20 @@ body {
   background: #e2e1e0;
 }
 
+.cover {
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../stockImages/Tie-Suit-Business.jpg');
+  color: #fff;
+}
+
 .card {
   margin: 1%;
   background: #fff;
@@ -19,6 +33,17 @@ body {
 
 .card:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+/* Home page */
+.home {
+  text-align: center;
+}
+
+.center-big {
+  padding: 15% 1%;
+  font-size: 350%;
 }
 
 /* Clubs list */
