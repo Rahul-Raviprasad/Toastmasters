@@ -10,4 +10,8 @@ angular
         url: '/',
         templateUrl: 'templates/home.tpl.html'
       })
+      .state('about', {
+        url: 'about',
+        templateUrl: 'templates/about.tpl.html'
+      })
   }

@@ -46,6 +46,13 @@ body {
   font-size: 350%;
 }
 
+/* About */
+.about-text {
+  font-size: 1.2em;
+  color: #ddd;
+  padding: 5%;
+}
+
 /* Clubs list */
 .club-list h3 {
   text-align: center;
