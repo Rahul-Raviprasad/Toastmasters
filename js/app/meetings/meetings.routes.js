@@ -9,7 +9,7 @@
     $stateProvider
       .state('meetings', {
         url: '/meetings',
-        templateUrl: 'js/app/meetings/meetings.tpl.html',
+        templateUrl: 'js/app/meetings/templates/meetings.tpl.html',
         controller: 'ClubsController',
         controllerAs: 'vm'
       });
