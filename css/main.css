@@ -21,6 +21,15 @@ body {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
+/* Clubs list */
+.club-list h3 {
+  text-align: center;
+}
+.club-list .club-title {
+  padding-left: 10%;
+  padding-top: 3%;
+}
+
 #club-title {
   padding-left: 2%;
 }
@@ -35,6 +44,16 @@ body {
   border-radius: 10px;
   margin-bottom: 20px;
   background-color: #babfb7;
+}
+
+
+/* Meetings list */
+.meetings-list h3 {
+  text-align: center;
+}
+.meetings-list .meetings-title {
+  padding-left: 10%;
+  padding-top: 3%;
 }
 
 /* Meeting Details */
