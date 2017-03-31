@@ -1,5 +1,9 @@
 <div class="club-list">
+  <ui-view></ui-view>
   <h3 id="club-title"> List of Clubs</h3>
+  <div>
+    <a href="#" ui-sref="register" class="btn btn-primary">Register New Club</a>
+  </div>
   <div class="card" ng-repeat="club in vm.clubs">
     <div class="card-block row">
       <div class="col-md-4">

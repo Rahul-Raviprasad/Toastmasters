@@ -16,12 +16,21 @@
           pageTitle: 'Clubs'
         }
       })
-      // .state('clubs.details', {
-      //   url: '/clubs/detailsID',
-      //   templateUrl: '',
-      //   controller: 'ClubsController',
-      //   controllerAs: 'vm'
-      // })
+      .state('clubs.details', {
+        url: '/clubs/detailsID',
+        templateUrl: '',
+        controller: 'ClubsController',
+        controllerAs: 'vm'
+      })
+      .state('register', {
+        url: '/register',
+        templateUrl: 'js/app/clubs/templates/club-register.tpl.html',
+        controller: 'ClubsController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'Register Club'
+        }
+      })
   }
 
 })();
