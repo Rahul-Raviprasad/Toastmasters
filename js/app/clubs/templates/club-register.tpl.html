@@ -1,5 +1,18 @@
 <!--Club registration form-->
 <div>
   Please fill the following details to register your new club
-  
+  <div class="row-fluid">
+    <form class="form form-horizontal" name="addEvent">
+      <fieldset>
+        <div class="control-group">
+          <label>Name</label>
+          <div class="control-group">
+            <input class="input-large" id="register-ClubName" name="clubName" type="text"
+            required minlength="3" ng-model="vm.name">
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
 </div>
